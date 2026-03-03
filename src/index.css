@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Backgrounds */
+  --bg-deep: #060d1a;
+  --bg-primary: #0a1628;
+  --bg-surface: #0f1e37;
+  --bg-card: rgba(15, 30, 55, 0.8);
+  --bg-card-hover: rgba(20, 40, 70, 0.9);
+
+  /* Pillar colors */
+  --foundation: #3b82f6;
+  --foundation-glow: rgba(59, 130, 246, 0.3);
+  --semantic: #00d4aa;
+  --semantic-glow: rgba(0, 212, 170, 0.3);
+  --ai: #a78bfa;
+  --ai-glow: rgba(167, 139, 250, 0.3);
+  --trust: #f5a623;
+  --trust-glow: rgba(245, 166, 35, 0.3);
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-trust: #f5a623;
+
+  /* Accents */
+  --accent-teal: #00d4aa;
+  --accent-amber: #f5a623;
+
+  /* Borders */
+  --border-subtle: rgba(0, 212, 170, 0.08);
+  --border-hover: rgba(0, 212, 170, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll-snap container */
+.snap-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.snap-section-free {
+  scroll-snap-align: none;
+}
+
+/* Frosted glass utility */
+.frosted-glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Ambient pulse keyframes */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes float-up {
+  0% { transform: translateY(0); opacity: 0.15; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(2px, -1px); }
+  50% { transform: translate(-1px, 2px); }
+  75% { transform: translate(-2px, -1px); }
+}
+
+/* Gradient text utility */
+.text-gradient-teal-blue {
+  background: linear-gradient(135deg, #00d4aa, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 170, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 212, 170, 0.4);
+}

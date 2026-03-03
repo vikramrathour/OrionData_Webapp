@@ -1,0 +1,516 @@
+{
+  "meta": {
+    "name": "ORIAN.Data Ontological Knowledge Graph",
+    "version": "2026.1",
+    "tagline": "Data with Intent",
+    "philosophy": "Value-to-Data",
+    "description": "Composable AI-native data platform accelerator for regulated enterprises"
+  },
+
+  "pillars": [
+    {
+      "id": "foundation",
+      "name": "Data Foundation",
+      "purpose": "Reliable, scalable data infrastructure — the engineering bedrock",
+      "color": "#3b82f6",
+      "glowColor": "rgba(59,130,246,0.3)",
+      "position": "top-left"
+    },
+    {
+      "id": "semantic",
+      "name": "Semantic Intelligence",
+      "purpose": "Meaning, context, and business intent encoded into data",
+      "color": "#00d4aa",
+      "glowColor": "rgba(0,212,170,0.3)",
+      "position": "top-right"
+    },
+    {
+      "id": "ai",
+      "name": "AI-Led Engineering",
+      "purpose": "AI as the delivery accelerator, not just the deliverable",
+      "color": "#a78bfa",
+      "glowColor": "rgba(167,139,250,0.3)",
+      "position": "bottom-left"
+    },
+    {
+      "id": "trust",
+      "name": "Trust & Operations",
+      "purpose": "Quality, governance, security, and operational confidence",
+      "color": "#f5a623",
+      "glowColor": "rgba(245,166,35,0.3)",
+      "position": "bottom-right"
+    }
+  ],
+
+  "components": [
+    {
+      "id": "ingest",
+      "name": "ORIAN.Data.Ingest",
+      "shortName": "Ingest",
+      "pillar": "foundation",
+      "description": "Intelligent ingestion engine — 200+ connectors, ontology-aware schema detection, adaptive pipeline generation",
+      "provenance": "Built from patterns across multi-source enterprise integrations",
+      "maturity": "field-tested",
+      "channels": ["tool", "specs", "prompts", "code"],
+      "industries": ["bfsi", "healthcare", "manufacturing", "technology", "retail"],
+      "capabilities": [
+        "Ontology-aware schema detection and classification",
+        "Adaptive pipeline generation from business specs",
+        "Quality-at-ingestion with configurable rule libraries",
+        "Structured + unstructured unified intake"
+      ]
+    },
+    {
+      "id": "migrate",
+      "name": "ORIAN.Data.Migrate",
+      "shortName": "Migrate",
+      "pillar": "foundation",
+      "description": "AI-powered migration accelerator — workload classification, complexity scoring, effort estimation, regression test generation",
+      "provenance": "Patterns proven across 49.65 TB and 11,748 tables in production",
+      "maturity": "production",
+      "channels": ["tool", "specs", "prompts", "standards", "code"],
+      "industries": ["bfsi", "healthcare", "technology"],
+      "capabilities": [
+        "AI-assisted source code analysis for stored procedures and ETL",
+        "Automated schema mapping and translation across platforms",
+        "Workload classification and complexity scoring ML models",
+        "Regression test generation and parallel-run orchestration"
+      ]
+    },
+    {
+      "id": "transform",
+      "name": "ORIAN.Data.Transform",
+      "shortName": "Transform",
+      "pillar": "foundation",
+      "description": "Adaptive pipeline generation — describe what you need, the engine generates pipeline code",
+      "provenance": "Encoding senior architects' decision patterns into reproducible transforms",
+      "maturity": "field-tested",
+      "channels": ["tool", "specs", "prompts", "code"],
+      "industries": ["bfsi", "healthcare", "manufacturing", "technology", "retail"],
+      "capabilities": [
+        "Business-spec-to-pipeline code generation",
+        "dbt model creation from semantic definitions",
+        "Cross-platform transformation (Spark, SQL, Python)",
+        "Quality gates embedded in transformation logic"
+      ]
+    },
+    {
+      "id": "catalog",
+      "name": "ORIAN.Data.Catalog",
+      "shortName": "Catalog",
+      "pillar": "foundation",
+      "description": "Semantic discovery and classification — active metadata management with business context",
+      "provenance": "Built to solve the 'dark data' problem in regulated enterprises",
+      "maturity": "MVP",
+      "channels": ["tool", "specs", "standards", "code"],
+      "industries": ["bfsi", "healthcare", "manufacturing", "technology"],
+      "capabilities": [
+        "ML-driven data classification and sensitivity tagging",
+        "Business glossary integration with ontology alignment",
+        "Usage analytics and data consumer tracking",
+        "Automated documentation generation"
+      ]
+    },
+    {
+      "id": "ontology",
+      "name": "ORIAN.Data.Ontology",
+      "shortName": "Ontology",
+      "pillar": "semantic",
+      "description": "Industry ontology engine — BIAN, FHIR, RAMI 4.0 starter kits with extensible domain modeling",
+      "provenance": "Shaped by 25 years inside banking, healthcare, and manufacturing data architectures",
+      "maturity": "field-tested",
+      "channels": ["tool", "specs", "prompts", "standards"],
+      "industries": ["bfsi", "healthcare", "manufacturing"],
+      "capabilities": [
+        "Industry ontology templates (BIAN, HL7/FHIR, RAMI 4.0, ACORD, ISA-95)",
+        "Domain-specific concept modeling and relationship mapping",
+        "Ontology versioning and collaborative curation",
+        "Cross-domain ontology alignment and federation"
+      ]
+    },
+    {
+      "id": "graph",
+      "name": "ORIAN.Data.Graph",
+      "shortName": "Graph",
+      "pillar": "semantic",
+      "description": "Knowledge graph engine — automated enrichment, natural language query, impact analysis",
+      "provenance": "The runtime materialization of ontological intelligence",
+      "maturity": "MVP",
+      "channels": ["tool", "specs", "code"],
+      "industries": ["bfsi", "healthcare", "manufacturing", "technology"],
+      "capabilities": [
+        "Automated graph enrichment from profiling and lineage",
+        "Natural language query interface for data estate",
+        "Impact analysis — know every downstream dependency before any change",
+        "Graph-powered entity resolution and deduplication"
+      ]
+    },
+    {
+      "id": "semantic-layer",
+      "name": "ORIAN.Data.Semantic",
+      "shortName": "Semantic Layer",
+      "pillar": "semantic",
+      "description": "Semantic layer and data products — business-meaningful abstractions over technical infrastructure",
+      "provenance": "Bridging the gap between data engineering and business consumption",
+      "maturity": "field-tested",
+      "channels": ["tool", "specs", "prompts", "standards", "code"],
+      "industries": ["bfsi", "healthcare", "manufacturing", "technology", "retail"],
+      "capabilities": [
+        "Data product specification and lifecycle management",
+        "Metrics layer with business-aligned definitions",
+        "Self-service marketplace with discovery and SLA monitoring",
+        "Consumer feedback loops and usage analytics"
+      ]
+    },
+    {
+      "id": "context",
+      "name": "ORIAN.Data.Context",
+      "shortName": "Inference Context",
+      "pillar": "semantic",
+      "description": "Inference-context-aligned data delivery — data shaped for how AI actually consumes it",
+      "provenance": "Solving the last mile between data platforms and AI inference",
+      "maturity": "MVP",
+      "channels": ["tool", "specs", "prompts", "code"],
+      "industries": ["bfsi", "healthcare", "technology"],
+      "capabilities": [
+        "Context window optimization for LLM consumption",
+        "Trust-scored, freshness-certified data delivery",
+        "Retrieval-augmented generation (RAG) data preparation",
+        "Agent-ready data packaging with semantic metadata"
+      ]
+    },
+    {
+      "id": "agent",
+      "name": "ORIAN.Data.Agent",
+      "shortName": "Agent",
+      "pillar": "ai",
+      "description": "Polymorphic AI engineering agent — skill-driven, ontology-aware, composable across data engineering tasks",
+      "provenance": "Closing the AI productivity gap from 10-15% to 55%+ for data engineers",
+      "maturity": "MVP",
+      "channels": ["tool", "prompts"],
+      "industries": ["bfsi", "healthcare", "manufacturing", "technology", "retail"],
+      "capabilities": [
+        "Skill library execution (SKILL.md-driven task automation)",
+        "Ontology-grounded reasoning for domain-specific tasks",
+        "Multi-step pipeline generation from natural language",
+        "Automated profiling, rule generation, validation, and remediation"
+      ]
+    },
+    {
+      "id": "skills",
+      "name": "ORIAN.Data.Skills",
+      "shortName": "Skills",
+      "pillar": "ai",
+      "description": "Prompt libraries and SKILL.md files — encoding accumulated delivery knowledge into portable, version-controlled AI skills",
+      "provenance": "Xoriant's best architects' decision-making encoded into reusable skills",
+      "maturity": "production",
+      "channels": ["prompts", "code"],
+      "industries": ["bfsi", "healthcare", "manufacturing", "technology", "retail"],
+      "capabilities": [
+        "Pre-engineered prompts for migration, DQ, dbt, ontology mapping",
+        "SKILL.md skill definitions for Claude Code, Copilot, and AI assistants",
+        "Naming conventions, quality rules, and architecture patterns encoded",
+        "Version-controlled, engagement-enriched skill library"
+      ]
+    },
+    {
+      "id": "estimate",
+      "name": "ORIAN.Data.Estimate",
+      "shortName": "Estimate",
+      "pillar": "ai",
+      "description": "AI-powered scoping and estimation — compressing 2-3 week assessments to 2-3 days",
+      "provenance": "Built to eliminate the senior architect bottleneck in engagement scoping",
+      "maturity": "field-tested",
+      "channels": ["tool", "specs", "prompts"],
+      "industries": ["bfsi", "healthcare", "manufacturing", "technology"],
+      "capabilities": [
+        "Workload complexity scoring with ML models",
+        "Effort estimation calibrated to actual engagement outcomes",
+        "Risk identification and migration readiness assessment",
+        "Automated assessment report generation"
+      ]
+    },
+    {
+      "id": "test",
+      "name": "ORIAN.Data.Test",
+      "shortName": "Test",
+      "pillar": "ai",
+      "description": "Intelligent test generation — automated regression, data validation, and quality assertion creation",
+      "provenance": "Addressing the testing culture gap in data engineering",
+      "maturity": "MVP",
+      "channels": ["tool", "specs", "prompts", "code"],
+      "industries": ["bfsi", "healthcare", "manufacturing", "technology"],
+      "capabilities": [
+        "Automated test case generation from pipeline specs",
+        "Regression test suites for migration validation",
+        "Data quality assertion libraries",
+        "Parallel-run comparison and anomaly detection"
+      ]
+    },
+    {
+      "id": "sentinel-dq",
+      "name": "Sentinel-DQ",
+      "shortName": "Sentinel-DQ",
+      "pillar": "trust",
+      "description": "Data quality platform with polymorphic agent architecture — automated profiling, anomaly detection, trust scoring, and remediation",
+      "provenance": "Born from the gap between what quality tools promise and what regulated enterprises actually need",
+      "maturity": "field-tested",
+      "channels": ["tool", "specs", "prompts", "standards", "code"],
+      "industries": ["bfsi", "healthcare", "manufacturing", "technology", "retail"],
+      "capabilities": [
+        "Automated profiling with ML-driven baseline learning",
+        "Anomaly detection pre-trained on enterprise data patterns",
+        "Semantic validation powered by knowledge graph",
+        "Data Trust Score — composite metric across quality dimensions",
+        "Auto-remediation with human-in-the-loop escalation"
+      ]
+    },
+    {
+      "id": "lineage",
+      "name": "ORIAN.Data.Lineage",
+      "shortName": "Lineage",
+      "pillar": "trust",
+      "description": "Graph-powered impact analysis — full lineage from source to decision, with regulatory audit trail",
+      "provenance": "Built for environments where lineage is audit evidence, not documentation",
+      "maturity": "field-tested",
+      "channels": ["tool", "specs", "standards", "code"],
+      "industries": ["bfsi", "healthcare", "manufacturing"],
+      "capabilities": [
+        "End-to-end lineage from raw source to business decision",
+        "Impact analysis — every downstream dependency mapped before change",
+        "OpenLineage integration for cross-platform lineage",
+        "Regulatory audit trail generation (BCBS 239, SOX)"
+      ]
+    },
+    {
+      "id": "comply",
+      "name": "ORIAN.Data.Comply",
+      "shortName": "Comply",
+      "pillar": "trust",
+      "description": "Regulatory compliance automation — policy-as-code, continuous monitoring, audit evidence auto-generation",
+      "provenance": "Built by engineers who've sat in the audit room, not just the dev room",
+      "maturity": "field-tested",
+      "channels": ["tool", "specs", "standards"],
+      "industries": ["bfsi", "healthcare", "manufacturing"],
+      "capabilities": [
+        "Policy-as-code (OPA) — portable compliance rules across clouds",
+        "Continuous compliance monitoring with real-time posture dashboard",
+        "Audit evidence auto-generation (BCBS 239, GDPR Art 30, SOX Sec 404)",
+        "EU AI Act model documentation and risk classification",
+        "NIST AI RMF implementation framework"
+      ]
+    },
+    {
+      "id": "observe",
+      "name": "ORIAN.Data.Observe",
+      "shortName": "Observe",
+      "pillar": "trust",
+      "description": "Unified xOps observability — DataOps, MLOps, AnalyticsOps measured by decision impact, not just pipeline uptime",
+      "provenance": "Moving from 'is the pipeline running' to 'is the decision being served'",
+      "maturity": "MVP",
+      "channels": ["tool", "specs", "standards", "code"],
+      "industries": ["bfsi", "healthcare", "manufacturing", "technology"],
+      "capabilities": [
+        "Decision-impact-driven observability metrics",
+        "Active metadata tracking with usage-lens monitoring",
+        "Unified DataOps/MLOps/AnalyticsOps operational layer",
+        "OpenTelemetry integration for cross-platform observability"
+      ]
+    },
+    {
+      "id": "shield",
+      "name": "ORIAN.Data.Shield",
+      "shortName": "Shield",
+      "pillar": "trust",
+      "description": "AI-era data security — training data poisoning prevention, prompt injection defense, IP protection",
+      "provenance": "Security reimagined for the inference era, not just the storage era",
+      "maturity": "concept",
+      "channels": ["tool", "specs", "standards"],
+      "industries": ["bfsi", "healthcare", "technology"],
+      "capabilities": [
+        "Training data poisoning prevention",
+        "Prompt injection defense for enterprise AI systems",
+        "IP misuse prevention and model exfiltration protection",
+        "Real-time encryption for data in inference context"
+      ]
+    }
+  ],
+
+  "edges": [
+    { "source": "ingest", "target": "catalog", "type": "feeds", "label": "feeds", "description": "Ingested data flows to catalog for classification" },
+    { "source": "ingest", "target": "transform", "type": "feeds", "label": "feeds", "description": "Raw ingested data enters transformation" },
+    { "source": "catalog", "target": "ontology", "type": "informs", "label": "informs", "description": "Discovered schemas seed ontology mapping" },
+    { "source": "ontology", "target": "sentinel-dq", "type": "enriches", "label": "enriches", "description": "Ontology provides semantic context for quality validation" },
+    { "source": "ontology", "target": "lineage", "type": "grounds", "label": "grounds", "description": "Ontology relationships power graph-based lineage" },
+    { "source": "ontology", "target": "context", "type": "contextualizes", "label": "contextualizes", "description": "Ontology provides intent context for inference delivery" },
+    { "source": "ontology", "target": "graph", "type": "defines", "label": "defines", "description": "Ontology is the schema; graph is its runtime materialization" },
+    { "source": "graph", "target": "ontology", "type": "materializes", "label": "materializes", "description": "Knowledge graph is the live runtime of ontological intelligence" },
+    { "source": "sentinel-dq", "target": "transform", "type": "validates", "label": "validates", "description": "Quality gates embedded in transformation pipelines" },
+    { "source": "sentinel-dq", "target": "context", "type": "certifies", "label": "certifies", "description": "Trust score attached to inference-ready data" },
+    { "source": "sentinel-dq", "target": "comply", "type": "evidences", "label": "evidences", "description": "Quality metrics feed compliance audit evidence" },
+    { "source": "lineage", "target": "comply", "type": "traces", "label": "traces", "description": "Lineage provides audit trail for regulatory compliance" },
+    { "source": "agent", "target": "skills", "type": "orchestrates", "label": "orchestrates", "description": "Agent executes tasks through the skill library" },
+    { "source": "agent", "target": "ontology", "type": "consumes", "label": "reasons over", "description": "Agent reasons over ontology for domain-aware tasks" },
+    { "source": "agent", "target": "sentinel-dq", "type": "invokes", "label": "invokes", "description": "Agent triggers quality checks as part of workflow" },
+    { "source": "estimate", "target": "migrate", "type": "references", "label": "references", "description": "Estimation uses migration pattern library for accuracy" },
+    { "source": "test", "target": "transform", "type": "validates", "label": "validates", "description": "Test generation creates validation suites for pipelines" },
+    { "source": "test", "target": "migrate", "type": "validates", "label": "validates", "description": "Regression tests validate migration correctness" },
+    { "source": "observe", "target": "lineage", "type": "monitors", "label": "monitors", "description": "Observability tracks lineage health and freshness" },
+    { "source": "observe", "target": "sentinel-dq", "type": "monitors", "label": "monitors", "description": "Observability tracks quality health across the estate" },
+    { "source": "shield", "target": "context", "type": "protects", "label": "protects", "description": "Security layer for inference-ready data delivery" },
+    { "source": "shield", "target": "agent", "type": "governs", "label": "governs", "description": "Guardrails for agent data access and actions" },
+    { "source": "migrate", "target": "transform", "type": "generates", "label": "generates", "description": "Migration produces new transformation pipelines" },
+    { "source": "semantic-layer", "target": "context", "type": "exposes", "label": "exposes", "description": "Semantic layer feeds inference context with business abstractions" },
+    { "source": "semantic-layer", "target": "ontology", "type": "consumes", "label": "consumes", "description": "Semantic layer uses ontology for business-meaningful definitions" },
+    { "source": "transform", "target": "semantic-layer", "type": "feeds", "label": "feeds", "description": "Transformed data materializes into semantic layer products" },
+    { "source": "catalog", "target": "lineage", "type": "feeds", "label": "feeds", "description": "Catalog metadata enriches lineage context" },
+    { "source": "skills", "target": "transform", "type": "accelerates", "label": "accelerates", "description": "Skills encode pipeline patterns that accelerate transforms" },
+    { "source": "skills", "target": "sentinel-dq", "type": "accelerates", "label": "accelerates", "description": "Skills encode quality rule patterns" }
+  ],
+
+  "deliveryChannels": [
+    {
+      "id": "tool",
+      "name": "As a Tool",
+      "icon": "⚡",
+      "description": "Full platform installation — polymorphic AI agent with skill library",
+      "securityClearance": "full",
+      "timeToValue": "weeks",
+      "richness": 5
+    },
+    {
+      "id": "specs",
+      "name": "As Specs & Frameworks",
+      "icon": "📐",
+      "description": "Architecture references, design patterns, implementation blueprints",
+      "securityClearance": "none",
+      "timeToValue": "day-1",
+      "richness": 3
+    },
+    {
+      "id": "prompts",
+      "name": "As Prompts & Skills",
+      "icon": "🧠",
+      "description": "Pre-engineered prompt libraries and SKILL.md files for AI coding assistants",
+      "securityClearance": "none",
+      "timeToValue": "day-1",
+      "richness": 4
+    },
+    {
+      "id": "standards",
+      "name": "As Standards & Best Practices",
+      "icon": "📋",
+      "description": "ISO 25012 checklists, DAMA-DMBOK guides, regulatory compliance frameworks",
+      "securityClearance": "none",
+      "timeToValue": "day-1",
+      "richness": 2
+    },
+    {
+      "id": "code",
+      "name": "As Code",
+      "icon": "💻",
+      "description": "Open-source and proprietary libraries, templates, modules",
+      "securityClearance": "minimal",
+      "timeToValue": "days",
+      "richness": 4
+    }
+  ],
+
+  "industryOntologies": [
+    { "id": "bian", "name": "BIAN", "fullName": "Banking Industry Architecture Network", "industry": "bfsi", "components": ["ontology", "comply", "lineage"] },
+    { "id": "fhir", "name": "HL7/FHIR", "fullName": "Fast Healthcare Interoperability Resources", "industry": "healthcare", "components": ["ontology", "ingest", "context"] },
+    { "id": "rami40", "name": "RAMI 4.0", "fullName": "Reference Architecture Model for Industry 4.0", "industry": "manufacturing", "components": ["ontology", "observe"] },
+    { "id": "isa95", "name": "ISA-95", "fullName": "Enterprise-Control System Integration", "industry": "manufacturing", "components": ["ontology"] },
+    { "id": "acord", "name": "ACORD", "fullName": "Association for Cooperative Operations Research and Development", "industry": "bfsi", "components": ["ontology"] },
+    { "id": "iso25012", "name": "ISO 25012", "fullName": "Data Quality Model", "industry": "all", "components": ["sentinel-dq"] },
+    { "id": "dmbok", "name": "DAMA-DMBOK", "fullName": "Data Management Body of Knowledge", "industry": "all", "components": ["sentinel-dq", "catalog"] },
+    { "id": "openlineage", "name": "OpenLineage", "fullName": "Open Standard for Data Lineage", "industry": "all", "components": ["lineage"] },
+    { "id": "bcbs239", "name": "BCBS 239", "fullName": "Principles for Risk Data Aggregation", "industry": "bfsi", "components": ["comply", "lineage", "sentinel-dq"] },
+    { "id": "gdpr", "name": "GDPR", "fullName": "General Data Protection Regulation", "industry": "all", "components": ["comply", "shield"] },
+    { "id": "hipaa", "name": "HIPAA", "fullName": "Health Insurance Portability and Accountability Act", "industry": "healthcare", "components": ["comply", "shield"] },
+    { "id": "euaiact", "name": "EU AI Act", "fullName": "European Union Artificial Intelligence Act", "industry": "all", "components": ["comply", "shield"] }
+  ],
+
+  "useCases": {
+    "bfsi": [
+      { "id": "bfsi-01", "name": "Regulatory Capital Reporting Modernization", "components": ["sentinel-dq", "ontology", "lineage", "comply"], "outcome": "6,000+ person-hours annually → 80% reduction" },
+      { "id": "bfsi-02", "name": "KYC/AML Data Lineage Automation", "components": ["lineage", "comply", "ontology", "graph"], "outcome": "Audit prep from weeks to hours" },
+      { "id": "bfsi-03", "name": "Settlement Risk Exposure Analytics", "components": ["ingest", "ontology", "context", "sentinel-dq"], "outcome": "40% reduction in settlement risk exposure" },
+      { "id": "bfsi-04", "name": "Cross-Border Payment Data Quality", "components": ["sentinel-dq", "ontology", "comply"], "outcome": "99.5%+ data accuracy for real-time settlements" },
+      { "id": "bfsi-05", "name": "Customer 360 for Wealth Management", "components": ["ingest", "graph", "semantic-layer", "context"], "outcome": "Single customer view across 12+ source systems" },
+      { "id": "bfsi-06", "name": "Credit Risk Model Data Foundation", "components": ["ingest", "sentinel-dq", "lineage", "context"], "outcome": "Model validation time reduced 60%" },
+      { "id": "bfsi-07", "name": "Fraud Detection Knowledge Graph", "components": ["graph", "ontology", "ingest", "agent"], "outcome": "3x improvement in fraud pattern detection" },
+      { "id": "bfsi-08", "name": "DORA Compliance Automation", "components": ["comply", "observe", "lineage", "shield"], "outcome": "Continuous compliance vs annual audit scramble" },
+      { "id": "bfsi-09", "name": "Trade Surveillance Data Platform", "components": ["ingest", "sentinel-dq", "lineage", "comply"], "outcome": "MiFID II surveillance from batch to near-real-time" },
+      { "id": "bfsi-10", "name": "Legacy Core Banking Migration", "components": ["migrate", "transform", "test", "estimate"], "outcome": "18 months → 7 months migration timeline" }
+    ],
+    "healthcare": [
+      { "id": "hc-01", "name": "Clinical Trial Data Harmonization", "components": ["ontology", "ingest", "context", "sentinel-dq"], "outcome": "Trial data prep from months to weeks" },
+      { "id": "hc-02", "name": "FHIR-Native Patient Data Platform", "components": ["ontology", "ingest", "semantic-layer", "context"], "outcome": "Interoperability compliance + AI-ready clinical data" },
+      { "id": "hc-03", "name": "Population Health Analytics Foundation", "components": ["ingest", "graph", "sentinel-dq", "semantic-layer"], "outcome": "Real-time risk stratification across populations" },
+      { "id": "hc-04", "name": "Claims Adjudication Intelligence", "components": ["ontology", "sentinel-dq", "agent", "context"], "outcome": "35% reduction in claims processing errors" },
+      { "id": "hc-05", "name": "Drug Safety Signal Detection", "components": ["ingest", "graph", "ontology", "observe"], "outcome": "Pharmacovigilance from reactive to proactive" },
+      { "id": "hc-06", "name": "EHR Migration and Modernization", "components": ["migrate", "ontology", "test", "estimate"], "outcome": "Zero data loss migration with FHIR mapping" },
+      { "id": "hc-07", "name": "Real-World Evidence Data Platform", "components": ["ingest", "sentinel-dq", "context", "lineage"], "outcome": "RWE generation from 12 disparate sources" },
+      { "id": "hc-08", "name": "Clinical Decision Support Data Layer", "components": ["context", "ontology", "sentinel-dq", "semantic-layer"], "outcome": "AI-ready clinical data with trust scores" },
+      { "id": "hc-09", "name": "Health Plan Member 360", "components": ["ingest", "graph", "semantic-layer", "sentinel-dq"], "outcome": "Unified member view across claims, clinical, behavioral" },
+      { "id": "hc-10", "name": "HIPAA Compliance Data Governance", "components": ["comply", "lineage", "shield", "sentinel-dq"], "outcome": "Automated PHI tracking and audit evidence" }
+    ],
+    "manufacturing": [
+      { "id": "mfg-01", "name": "Predictive Maintenance Data Fabric", "components": ["ingest", "ontology", "observe", "context"], "outcome": "40% reduction in unplanned downtime" },
+      { "id": "mfg-02", "name": "Digital Product Passport Readiness", "components": ["ontology", "comply", "lineage", "catalog"], "outcome": "EU DPP compliance ahead of mandate" },
+      { "id": "mfg-03", "name": "Supply Chain Visibility Graph", "components": ["graph", "ingest", "ontology", "observe"], "outcome": "End-to-end supply chain transparency" },
+      { "id": "mfg-04", "name": "OT/IT Data Convergence Platform", "components": ["ingest", "ontology", "observe", "shield"], "outcome": "Unified view across shop floor and enterprise" },
+      { "id": "mfg-05", "name": "ESG Emissions Reporting Automation", "components": ["ingest", "ontology", "comply", "sentinel-dq"], "outcome": "Emissions reporting from quarterly to continuous" }
+    ],
+    "technology": [
+      { "id": "tech-01", "name": "SaaS Multi-Tenant Data Platform", "components": ["ingest", "transform", "semantic-layer", "shield"], "outcome": "Tenant isolation with shared intelligence" },
+      { "id": "tech-02", "name": "AI Model Training Data Pipeline", "components": ["ingest", "sentinel-dq", "context", "lineage"], "outcome": "Training data quality from 72% to 96%" },
+      { "id": "tech-03", "name": "Platform Data Mesh Implementation", "components": ["semantic-layer", "catalog", "ontology", "observe"], "outcome": "Domain-owned data products with governance" },
+      { "id": "tech-04", "name": "Legacy Data Warehouse Modernization", "components": ["migrate", "transform", "estimate", "test"], "outcome": "Cloud migration with zero business disruption" },
+      { "id": "tech-05", "name": "Developer Analytics Platform", "components": ["ingest", "transform", "semantic-layer", "observe"], "outcome": "Engineering productivity insights in real-time" }
+    ],
+    "retail": [
+      { "id": "ret-01", "name": "Customer Intelligence Hub", "components": ["ingest", "graph", "semantic-layer", "context"], "outcome": "Unified customer intelligence across 15+ touchpoints" },
+      { "id": "ret-02", "name": "Inventory Optimization Data Layer", "components": ["ingest", "ontology", "sentinel-dq", "observe"], "outcome": "20% reduction in stockout events" },
+      { "id": "ret-03", "name": "Personalization Engine Data Foundation", "components": ["context", "graph", "sentinel-dq", "semantic-layer"], "outcome": "Real-time personalization with trust-scored data" },
+      { "id": "ret-04", "name": "Supply Chain & Demand Sensing", "components": ["ingest", "transform", "ontology", "observe"], "outcome": "Demand forecast accuracy improved 35%" },
+      { "id": "ret-05", "name": "Omnichannel Data Unification", "components": ["ingest", "catalog", "transform", "sentinel-dq"], "outcome": "Single source of truth across all channels" }
+    ]
+  },
+
+  "valueChainPaths": {
+    "outcomeToComponent": {
+      "description": "Start with a business outcome, trace backward to the components that deliver it",
+      "example": "Reduce settlement risk → Settlement Risk Exposure Analytics → [Ingest + Ontology(BIAN) + Context + Sentinel-DQ] → Delivery via Specs + Prompts on Day 1"
+    },
+    "intentToData": {
+      "description": "Start with an industry ontology, trace how intent flows through the system",
+      "example": "BIAN → Ontology → enriches → Sentinel-DQ → certifies → Context → delivers intent-aligned data to agents"
+    },
+    "trustChain": {
+      "description": "Start with Trust Score, trace through quality dimensions to regulatory compliance",
+      "example": "Trust Score → Sentinel-DQ dimensions → validates transforms → lineage traces to comply → BCBS 239 audit evidence"
+    },
+    "adoptionPath": {
+      "description": "Start with a delivery channel, find what's available on Day 1",
+      "example": "Prompts & Skills channel → [Ingest, Migrate, Transform, Ontology, Semantic, Context, Agent, Skills, Estimate, Test, Sentinel-DQ] → 12 of 17 components available without security clearance"
+    }
+  },
+
+  "layout": {
+    "description": "Suggested spatial layout for D3.js force-directed or manual positioning",
+    "pillarZones": {
+      "foundation": { "cx": 0.25, "cy": 0.25, "label": "top-left quadrant" },
+      "semantic": { "cx": 0.75, "cy": 0.25, "label": "top-right quadrant" },
+      "ai": { "cx": 0.25, "cy": 0.75, "label": "bottom-left quadrant" },
+      "trust": { "cx": 0.75, "cy": 0.75, "label": "bottom-right quadrant" }
+    },
+    "centerNode": {
+      "id": "orian-core",
+      "name": "ORIAN.Data",
+      "description": "Data with Intent",
+      "position": { "cx": 0.5, "cy": 0.5 }
+    }
+  }
+}
