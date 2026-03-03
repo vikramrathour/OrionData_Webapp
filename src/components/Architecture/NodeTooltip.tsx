@@ -3,7 +3,7 @@ import type { Component } from '../../hooks/useGraphData'
 
 const PILLAR_COLORS: Record<string, string> = {
   foundation: '#3b82f6',
-  semantic: '#00d4aa',
+  semantic: '#00b23b',
   ai: '#a78bfa',
   trust: '#f5a623',
 }
@@ -40,7 +40,7 @@ interface Props {
 export default function NodeTooltip({ component, position, pinned, onClose }: Props) {
   if (!component) return null
 
-  const pillarColor = PILLAR_COLORS[component.pillar] || '#00d4aa'
+  const pillarColor = PILLAR_COLORS[component.pillar] || '#00b23b'
 
   return (
     <AnimatePresence>
@@ -58,7 +58,7 @@ export default function NodeTooltip({ component, position, pinned, onClose }: Pr
         {/* Header */}
         <div className="mb-2 flex items-start justify-between">
           <div>
-            <h4 className="text-sm font-semibold text-white">{component.name}</h4>
+            <h4 className="text-sm font-semibold text-[var(--text-primary)]">{component.name}</h4>
             <span
               className="mt-1 inline-block rounded-full px-2 py-0.5 text-[10px] font-medium"
               style={{ backgroundColor: `${pillarColor}20`, color: pillarColor }}
@@ -69,7 +69,7 @@ export default function NodeTooltip({ component, position, pinned, onClose }: Pr
           {pinned && (
             <button
               onClick={onClose}
-              className="text-[var(--text-muted)] hover:text-white"
+              className="text-[var(--text-muted)] hover:text-[var(--text-primary)]"
               aria-label="Close tooltip"
             >
               ×

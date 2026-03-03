@@ -27,9 +27,10 @@ interface Props {
   onSubmit: (message: string) => void
   loading: boolean
   conversation: ConversationMessage[]
+  initialMessage?: string
 }
 
-export default function ChatInterface({ onSubmit, loading, conversation }: Props) {
+export default function ChatInterface({ onSubmit, loading, conversation, initialMessage }: Props) {
   const [input, setInput] = useState('')
   const [placeholderIdx, setPlaceholderIdx] = useState(0)
   const [loadingStage, setLoadingStage] = useState(0)
@@ -52,6 +53,13 @@ export default function ChatInterface({ onSubmit, loading, conversation }: Props
     })
     return () => intervals.forEach(clearTimeout)
   }, [loading])
+
+  // Pre-fill from ROI calculator
+  useEffect(() => {
+    if (initialMessage && !input && conversation.length === 0) {
+      setInput(initialMessage)
+    }
+  }, [initialMessage])
 
   // Auto-resize textarea
   useEffect(() => {
@@ -78,7 +86,7 @@ export default function ChatInterface({ onSubmit, loading, conversation }: Props
               key={i}
               className={`rounded-lg p-3 text-sm ${
                 msg.role === 'user'
-                  ? 'ml-8 bg-teal/10 text-white'
+                  ? 'ml-8 bg-teal/10 text-[var(--text-primary)]'
                   : 'mr-8 bg-[var(--bg-surface)] text-[var(--text-secondary)]'
               }`}
             >
@@ -100,7 +108,7 @@ export default function ChatInterface({ onSubmit, loading, conversation }: Props
           placeholder={PLACEHOLDERS[placeholderIdx]}
           rows={3}
           disabled={loading}
-          className="w-full resize-none bg-transparent text-sm text-white placeholder-[var(--text-muted)] outline-none"
+          className="w-full resize-none bg-transparent text-sm text-[var(--text-primary)] placeholder-[var(--text-muted)] outline-none"
         />
 
         {/* Quick starts (only shown initially) */}
@@ -123,7 +131,7 @@ export default function ChatInterface({ onSubmit, loading, conversation }: Props
           <button
             onClick={handleSubmit}
             disabled={!input.trim() || loading}
-            className="rounded-lg bg-teal px-5 py-2 text-sm font-semibold text-[var(--bg-deep)] transition-all hover:brightness-110 disabled:opacity-40"
+            className="rounded-lg bg-teal px-5 py-2 text-sm font-semibold text-white transition-all hover:brightness-110 disabled:opacity-40"
           >
             {loading ? 'Decoding...' : 'Decode my intent →'}
           </button>

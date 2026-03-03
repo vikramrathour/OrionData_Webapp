@@ -40,10 +40,10 @@ export default function ProofSection({ graphData }: Props) {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-xs font-semibold uppercase tracking-[2px] text-trust">
+          <p className="text-xs font-semibold uppercase tracking-[2px] text-[var(--text-trust)]">
             The Proof
           </p>
-          <h2 className="mt-4 font-serif text-3xl text-white md:text-4xl">
+          <h2 className="mt-4 font-serif text-3xl font-bold text-[var(--text-primary)] md:text-4xl">
             35 use cases. 5 industries.{' '}
             <br className="hidden md:inline" />
             Every outcome earned, not promised.
@@ -84,22 +84,22 @@ export default function ProofSection({ graphData }: Props) {
           transition={{ duration: 0.6 }}
         >
           <div className="mx-auto inline-flex flex-wrap items-center justify-center gap-4 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-card)] px-8 py-4 text-sm md:gap-8">
-            <span className="text-white">
+            <span className="text-[var(--text-primary)]">
               <strong className="font-serif text-lg">49.65 TB</strong>{' '}
               <span className="text-[var(--text-muted)]">migrated</span>
             </span>
             <span className="text-[var(--text-muted)]">|</span>
-            <span className="text-white">
+            <span className="text-[var(--text-primary)]">
               <strong className="font-serif text-lg">11,748</strong>{' '}
               <span className="text-[var(--text-muted)]">tables</span>
             </span>
             <span className="text-[var(--text-muted)]">|</span>
-            <span className="text-white">
+            <span className="text-[var(--text-primary)]">
               <strong className="font-serif text-lg">$145K/mo</strong>{' '}
               <span className="text-[var(--text-muted)]">saved</span>
             </span>
             <span className="text-[var(--text-muted)]">|</span>
-            <span className="text-white">
+            <span className="text-[var(--text-primary)]">
               <strong className="font-serif text-lg">99.5%</strong>{' '}
               <span className="text-[var(--text-muted)]">data accuracy</span>
             </span>

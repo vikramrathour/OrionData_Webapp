@@ -1,6 +1,6 @@
 const INDUSTRIES = [
   { id: 'bfsi', label: 'BFSI', ontology: 'BIAN', color: '#3b82f6' },
-  { id: 'healthcare', label: 'Healthcare & Life Sciences', ontology: 'HL7/FHIR', color: '#00d4aa' },
+  { id: 'healthcare', label: 'Healthcare & Life Sciences', ontology: 'HL7/FHIR', color: '#00b23b' },
   { id: 'manufacturing', label: 'Manufacturing', ontology: 'RAMI 4.0', color: '#f5a623' },
   { id: 'technology', label: 'Technology', ontology: '', color: '#a78bfa' },
   { id: 'retail', label: 'Retail', ontology: '', color: '#f472b6' },
@@ -23,7 +23,7 @@ export default function IndustrySelector({ active, onChange, counts }: Props) {
             onClick={() => onChange(ind.id)}
             className={`relative flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${
               isActive
-                ? 'text-white'
+                ? 'text-[var(--text-primary)]'
                 : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'
             }`}
             style={isActive ? {

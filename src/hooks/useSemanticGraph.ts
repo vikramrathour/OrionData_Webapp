@@ -65,7 +65,7 @@ export function useSemanticGraph(
       .selectAll<SVGLineElement, GraphLink>('line')
       .data(links)
       .join('line')
-      .attr('stroke', '#1e3a5f')
+      .attr('stroke', '#d1d5db')
       .attr('stroke-width', 1.5)
       .attr('opacity', 0)
 
@@ -82,8 +82,8 @@ export function useSemanticGraph(
       .append('rect')
       .attr('rx', 8)
       .attr('ry', 8)
-      .attr('fill', '#0f2240')
-      .attr('stroke', '#1e3a5f')
+      .attr('fill', '#f8f9fa')
+      .attr('stroke', '#d1d5db')
       .attr('stroke-width', 1)
 
     // Text label (starts as raw monospace)
@@ -91,7 +91,7 @@ export function useSemanticGraph(
       .append('text')
       .attr('text-anchor', 'middle')
       .attr('dominant-baseline', 'central')
-      .attr('fill', '#64748b')
+      .attr('fill', '#94a3b8')
       .attr('font-family', "'JetBrains Mono', monospace")
       .attr('font-size', (d) => {
         if (isMobile) return d.tier === 'primary' ? 11 : 9
@@ -172,7 +172,7 @@ export function useSemanticGraph(
       const text = g.select('text')
       const rect = g.select('rect')
       const delay = 4500 + i * 350
-      const pillarColor = d.pillar ? PILLAR_COLORS[d.pillar] : '#00d4aa'
+      const pillarColor = d.pillar ? PILLAR_COLORS[d.pillar] : '#00b23b'
 
       text
         .transition()
@@ -187,7 +187,7 @@ export function useSemanticGraph(
             .text(d.intentLabel)
             .attr('font-family', "'DM Sans', sans-serif")
             .attr('font-size', fontSize)
-            .attr('fill', '#e2e8f0')
+            .attr('fill', '#1a1a1a')
             .attr('font-weight', '500')
 
           const bbox = (thisText.node() as SVGTextElement).getBBox()
@@ -216,7 +216,7 @@ export function useSemanticGraph(
         .duration(500)
         .attr('stroke', (d) => {
           const src = d.source as GraphNode
-          const srcColor = src.pillar ? PILLAR_COLORS[src.pillar] : '#00d4aa'
+          const srcColor = src.pillar ? PILLAR_COLORS[src.pillar] : '#00b23b'
           return srcColor
         })
         .attr('opacity', 0.4)

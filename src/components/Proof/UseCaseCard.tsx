@@ -5,7 +5,7 @@ import FieldNote from './FieldNote'
 
 const PILLAR_COLORS: Record<string, string> = {
   foundation: '#3b82f6',
-  semantic: '#00d4aa',
+  semantic: '#00b23b',
   ai: '#a78bfa',
   trust: '#f5a623',
 }
@@ -34,7 +34,7 @@ export default function UseCaseCard({ useCase, components, fieldNote }: Props) {
           className="flex w-full items-start justify-between text-left"
         >
           <div className="flex-1">
-            <h4 className="text-sm font-semibold text-white">{useCase.name}</h4>
+            <h4 className="text-sm font-semibold text-[var(--text-primary)]">{useCase.name}</h4>
             <span className="mt-1 inline-block rounded-full bg-teal/10 px-2.5 py-0.5 text-xs font-medium text-teal">
               {useCase.outcome}
             </span>

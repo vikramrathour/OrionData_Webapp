@@ -36,7 +36,7 @@ export default function EngagementCTA() {
           viewport={{ once: true }}
           transition={{ delay: i * 0.15, duration: 0.5 }}
         >
-          <h4 className="font-serif text-lg text-white">{eng.title}</h4>
+          <h4 className="font-serif text-lg font-bold text-[var(--text-primary)]">{eng.title}</h4>
           <div className="mt-2 inline-block rounded-full bg-teal/10 px-2.5 py-0.5 text-xs font-medium text-teal">
             {eng.duration}
           </div>

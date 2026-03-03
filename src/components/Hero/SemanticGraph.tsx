@@ -16,12 +16,12 @@ export default function SemanticGraph({ onPhaseChange, minimal }: Props) {
   }
 
   return (
-    <div className="relative h-full w-full rounded-2xl border border-[var(--border-subtle)] bg-[rgba(6,13,26,0.6)] backdrop-blur-sm">
+    <div className="relative h-full w-full rounded-2xl border border-[var(--border-subtle)] bg-[rgba(248,249,250,0.6)] backdrop-blur-sm">
       {/* Pillar legend */}
       <div className="absolute bottom-3 left-3 z-20 flex gap-3">
         {[
           { label: 'Foundation', color: '#3b82f6' },
-          { label: 'Semantic', color: '#00d4aa' },
+          { label: 'Semantic', color: '#00b23b' },
           { label: 'AI', color: '#a78bfa' },
           { label: 'Trust', color: '#f5a623' },
         ].map((p) => (

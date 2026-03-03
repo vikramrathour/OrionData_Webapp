@@ -24,7 +24,7 @@ export default function InversionSection() {
           <p className="text-xs font-semibold uppercase tracking-[2px] text-teal">
             The Philosophy
           </p>
-          <h2 className="mt-4 font-serif text-3xl text-white md:text-4xl">
+          <h2 className="mt-4 font-serif text-3xl font-bold text-[var(--text-primary)] md:text-4xl">
             The industry builds data-up.{' '}
             <span className="text-gradient-teal-blue italic">We build outcomes-down.</span>
           </h2>
@@ -45,14 +45,14 @@ export default function InversionSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <div className="mx-auto max-w-2xl rounded-2xl border border-[rgba(0,212,170,0.1)] bg-[rgba(0,212,170,0.03)] p-8">
+          <div className="mx-auto max-w-2xl rounded-2xl border border-[rgba(0,178,59,0.1)] bg-[rgba(0,178,59,0.03)] p-8">
             <MetricCounters metrics={COMPARISON_METRICS} />
           </div>
         </motion.div>
 
         {/* Closing Quote */}
         <motion.blockquote
-          className="mt-16 text-center font-serif text-xl italic text-trust"
+          className="mt-16 text-center font-serif text-xl italic text-[var(--text-trust)]"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

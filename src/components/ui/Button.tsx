@@ -10,8 +10,8 @@ export default function Button({ variant, href, children }: ButtonProps) {
 
   const styles =
     variant === 'primary'
-      ? 'bg-teal text-[var(--bg-deep)] hover:brightness-110 hover:shadow-lg hover:shadow-teal/25 hover:-translate-y-0.5'
-      : 'border border-white/20 text-white hover:border-teal hover:text-teal'
+      ? 'bg-teal text-white hover:brightness-110 hover:shadow-lg hover:shadow-teal/25 hover:-translate-y-0.5'
+      : 'border border-[var(--text-primary)]/20 text-[var(--text-primary)] hover:border-teal hover:text-teal'
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (href.startsWith('#')) {

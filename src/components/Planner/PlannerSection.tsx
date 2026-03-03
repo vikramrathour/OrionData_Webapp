@@ -1,6 +1,7 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import type { GraphData } from '../../hooks/useGraphData'
+import { useAppContext } from '../../context/AppContext'
 import ChatInterface from './ChatInterface'
 import SolutionPlan from './SolutionPlan'
 import EngagementCTA from './EngagementCTA'
@@ -10,7 +11,24 @@ interface Props {
   graphData: GraphData
 }
 
+function buildPrefillMessage(inputs: import('../../context/AppContext').ROIInputs): string {
+  const parts = [`We're a ${inputs.industry} organization`]
+  if (inputs.regulations.length > 0) {
+    parts.push(`with ${inputs.regulations.join(', ')} compliance requirements`)
+  }
+  if (inputs.hasMigration) {
+    parts.push(`planning to migrate ${inputs.migrationObjects.toLocaleString()} objects from ${inputs.migrationSource}`)
+  }
+  parts.push(`with a team of ${inputs.engineers} data engineers`)
+  if (inputs.buildingForAI) {
+    parts.push('building for AI/agent consumption')
+  }
+  return parts.join(', ') + '.'
+}
+
 export default function PlannerSection({ graphData }: Props) {
+  const { roiInputs } = useAppContext()
+  const initialMessage = useMemo(() => roiInputs ? buildPrefillMessage(roiInputs) : undefined, [roiInputs])
   const [loading, setLoading] = useState(false)
   const [plan, setPlan] = useState<PlanType | null>(null)
   const [conversation, setConversation] = useState<ConversationMessage[]>([])
@@ -57,7 +75,7 @@ export default function PlannerSection({ graphData }: Props) {
           <p className="text-xs font-semibold uppercase tracking-[2px] text-teal">
             Your Turn
           </p>
-          <h2 className="mt-4 font-serif text-3xl text-white md:text-4xl">
+          <h2 className="mt-4 font-serif text-3xl font-bold text-[var(--text-primary)] md:text-4xl">
             Tell us the outcome.{' '}
             <span className="text-gradient-teal-blue italic">We'll decode the intent.</span>
           </h2>
@@ -76,9 +94,10 @@ export default function PlannerSection({ graphData }: Props) {
               onSubmit={handleSubmit}
               loading={loading}
               conversation={conversation}
+              initialMessage={initialMessage}
             />
             {error && (
-              <p className="mt-3 text-sm text-red-400">{error}</p>
+              <p className="mt-3 text-sm text-red-500">{error}</p>
             )}
           </div>
 

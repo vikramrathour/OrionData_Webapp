@@ -57,7 +57,7 @@ function Counter({ metric, inView }: { metric: Metric; inView: boolean }) {
   const display = useCountUp(metric.value, inView)
   return (
     <div className="text-center">
-      <div className="font-serif text-2xl text-white md:text-3xl">{display}</div>
+      <div className="font-serif text-2xl font-bold text-[var(--text-primary)] md:text-3xl">{display}</div>
       <div className="mt-1 text-xs text-[var(--text-muted)]">{metric.label}</div>
     </div>
   )

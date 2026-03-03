@@ -29,7 +29,7 @@ export default function DeliveryChannelBar({
         className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-all ${
           allActive
             ? 'bg-teal/20 text-teal'
-            : 'text-[var(--text-muted)] hover:text-white'
+            : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
         }`}
       >
         All ({totalCount})
@@ -45,7 +45,7 @@ export default function DeliveryChannelBar({
             className={`relative flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-all ${
               isActive
                 ? 'bg-teal/20 text-teal'
-                : 'text-[var(--text-muted)] hover:text-white'
+                : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
             }`}
           >
             <span>{ch.icon}</span>

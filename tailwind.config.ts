@@ -5,19 +5,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: '#0a1628',
-        'bg-deep': '#060d1a',
-        'bg-primary': '#0a1628',
-        'bg-surface': '#0f1e37',
+        navy: '#1a1a1a',
+        'bg-deep': '#ffffff',
+        'bg-primary': '#f8f9fa',
+        'bg-surface': '#f1f3f5',
         foundation: '#3b82f6',
-        semantic: '#00d4aa',
+        semantic: '#00b23b',
         ai: '#a78bfa',
         trust: '#f5a623',
-        teal: '#00d4aa',
+        teal: '#00b23b',
       },
       fontFamily: {
-        serif: ['Instrument Serif', 'Georgia', 'serif'],
-        sans: ['DM Sans', 'sans-serif'],
+        serif: ['Roboto', 'sans-serif'],
+        sans: ['Roboto', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
     },

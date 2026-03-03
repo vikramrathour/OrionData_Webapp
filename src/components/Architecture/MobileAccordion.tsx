@@ -4,7 +4,7 @@ import type { Component, Pillar, Edge } from '../../hooks/useGraphData'
 
 const PILLAR_COLORS: Record<string, string> = {
   foundation: '#3b82f6',
-  semantic: '#00d4aa',
+  semantic: '#00b23b',
   ai: '#a78bfa',
   trust: '#f5a623',
 }
@@ -33,7 +33,7 @@ export default function MobileAccordion({ pillars, components, edges }: Props) {
               style={{ borderLeft: `3px solid ${color}` }}
             >
               <div>
-                <span className="text-sm font-semibold text-white">{pillar.name}</span>
+                <span className="text-sm font-semibold text-[var(--text-primary)]">{pillar.name}</span>
                 <span className="ml-2 text-xs text-[var(--text-muted)]">
                   {pillarComponents.length} components
                 </span>
@@ -66,7 +66,7 @@ export default function MobileAccordion({ pillars, components, edges }: Props) {
                           className="rounded-lg bg-[var(--bg-surface)] p-3"
                         >
                           <div className="flex items-center justify-between">
-                            <span className="text-sm font-medium text-white">{comp.shortName}</span>
+                            <span className="text-sm font-medium text-[var(--text-primary)]">{comp.shortName}</span>
                             <span className="text-[10px] text-[var(--text-muted)]">{comp.maturity}</span>
                           </div>
                           <p className="mt-1 text-xs text-[var(--text-secondary)]">{comp.description}</p>

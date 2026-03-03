@@ -2,7 +2,7 @@ import type { GraphNode, GraphLink } from '../../types/graph'
 
 export const PILLAR_COLORS: Record<string, string> = {
   foundation: '#3b82f6',
-  semantic: '#00d4aa',
+  semantic: '#00b23b',
   ai: '#a78bfa',
   trust: '#f5a623',
 }

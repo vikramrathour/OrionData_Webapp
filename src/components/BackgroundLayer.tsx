@@ -40,7 +40,7 @@ export default function BackgroundLayer() {
       x: Math.random() * window.innerWidth,
       y: Math.random() * document.documentElement.scrollHeight,
       speed: 0.2 + Math.random() * 0.5,
-      opacity: 0.05 + Math.random() * 0.25,
+      opacity: 0.03 + Math.random() * 0.08,
       size: 1 + Math.random() * 2,
     }))
 
@@ -62,7 +62,7 @@ export default function BackgroundLayer() {
       const h = canvas!.height
 
       // Grid lines
-      ctx!.strokeStyle = 'rgba(0, 212, 170, 0.03)'
+      ctx!.strokeStyle = 'rgba(0, 178, 59, 0.04)'
       ctx!.lineWidth = 1
       const gridOffset = (scrollY * 0.1) % 80
       for (let x = -gridOffset; x < w; x += 80) {
@@ -81,7 +81,6 @@ export default function BackgroundLayer() {
       // Particles
       for (const p of particles) {
         const screenY = p.y - scrollY * 0.3
-        // Wrap particles
         if (screenY < -10) {
           p.y += document.documentElement.scrollHeight + 100
         }
@@ -91,7 +90,7 @@ export default function BackgroundLayer() {
         if (drawY > -10 && drawY < h + 10) {
           ctx!.beginPath()
           ctx!.arc(p.x, drawY, p.size, 0, Math.PI * 2)
-          ctx!.fillStyle = `rgba(0, 212, 170, ${p.opacity})`
+          ctx!.fillStyle = `rgba(0, 178, 59, ${p.opacity})`
           ctx!.fill()
         }
       }
@@ -105,7 +104,7 @@ export default function BackgroundLayer() {
         const y = baseY - textParallax
         const screenY2 = ((y % (h + 400)) + h + 400) % (h + 400) - 200
         if (screenY2 > -50 && screenY2 < h + 50) {
-          ctx!.fillStyle = 'rgba(0, 212, 170, 0.025)'
+          ctx!.fillStyle = 'rgba(0, 178, 59, 0.035)'
           ctx!.fillText(SQL_FRAGMENTS[i], x, screenY2)
         }
       }

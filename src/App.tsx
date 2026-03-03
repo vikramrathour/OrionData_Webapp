@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { useGraphData } from './hooks/useGraphData'
 import { useScrollSection } from './hooks/useScrollSection'
+import { AppProvider } from './context/AppContext'
 import BackgroundLayer from './components/BackgroundLayer'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero/Hero'
@@ -8,6 +9,7 @@ import InversionSection from './components/Inversion/InversionSection'
 import ArchitectureSection from './components/Architecture/ArchitectureSection'
 
 const ProofSection = lazy(() => import('./components/Proof/ProofSection'))
+const ROISection = lazy(() => import('./components/Section5_ROI/ROISection'))
 const PlannerSection = lazy(() => import('./components/Planner/PlannerSection'))
 
 function SectionLoader() {
@@ -23,7 +25,7 @@ export default function App() {
   const { activeSection, registerSection } = useScrollSection()
 
   return (
-    <>
+    <AppProvider>
       <BackgroundLayer />
       <Navigation activeSection={activeSection} />
       <main>
@@ -38,7 +40,7 @@ export default function App() {
           <ArchitectureSection graphData={graphData} />
         </section>
 
-        {/* Free-scroll sections (4-5) */}
+        {/* Free-scroll sections (4-6) */}
         <div ref={registerSection(3)}>
           <Suspense fallback={<SectionLoader />}>
             <ProofSection graphData={graphData} />
@@ -46,10 +48,15 @@ export default function App() {
         </div>
         <div ref={registerSection(4)}>
           <Suspense fallback={<SectionLoader />}>
+            <ROISection />
+          </Suspense>
+        </div>
+        <div ref={registerSection(5)}>
+          <Suspense fallback={<SectionLoader />}>
             <PlannerSection graphData={graphData} />
           </Suspense>
         </div>
       </main>
-    </>
+    </AppProvider>
   )
 }

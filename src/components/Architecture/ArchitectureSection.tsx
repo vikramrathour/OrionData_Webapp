@@ -44,7 +44,7 @@ export default function ArchitectureSection({ graphData }: Props) {
           <p className="text-xs font-semibold uppercase tracking-[2px] text-teal">
             The Architecture
           </p>
-          <h2 className="mt-4 font-serif text-3xl text-white md:text-4xl">
+          <h2 className="mt-4 font-serif text-3xl font-bold text-[var(--text-primary)] md:text-4xl">
             17 components. 4 pillars. One composable system.
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base text-[var(--text-secondary)]">

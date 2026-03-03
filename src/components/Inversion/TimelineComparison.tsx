@@ -54,8 +54,8 @@ function TimelineStage({
       <div
         className={`flex h-12 w-12 items-center justify-center rounded-xl text-xl ${
           side === 'old'
-            ? 'bg-[rgba(100,116,139,0.1)] border border-[rgba(100,116,139,0.2)]'
-            : 'bg-[rgba(0,212,170,0.1)] border border-[rgba(0,212,170,0.2)]'
+            ? 'bg-[rgba(148,163,184,0.1)] border border-[rgba(148,163,184,0.2)]'
+            : 'bg-[rgba(0,178,59,0.08)] border border-[rgba(0,178,59,0.2)]'
         }`}
       >
         {icon}
@@ -76,7 +76,7 @@ export default function TimelineComparison() {
     <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
       {/* Old Way */}
       <motion.div
-        className="rounded-2xl border border-[rgba(100,116,139,0.1)] bg-[rgba(15,30,55,0.4)] p-6"
+        className="rounded-2xl border border-[rgba(148,163,184,0.15)] bg-[rgba(148,163,184,0.04)] p-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -102,12 +102,12 @@ export default function TimelineComparison() {
         </div>
 
         {/* Metrics */}
-        <MetricCounters metrics={OLD_METRICS} className="border-t border-[rgba(100,116,139,0.1)] pt-4" />
+        <MetricCounters metrics={OLD_METRICS} className="border-t border-[rgba(148,163,184,0.15)] pt-4" />
       </motion.div>
 
       {/* ORIAN Way */}
       <motion.div
-        className="rounded-2xl border border-[rgba(0,212,170,0.1)] bg-[rgba(0,212,170,0.03)] p-6"
+        className="rounded-2xl border border-[rgba(0,178,59,0.15)] bg-[rgba(0,178,59,0.03)] p-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -116,7 +116,7 @@ export default function TimelineComparison() {
         <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-teal">
           Demand-Side Thinking
         </div>
-        <h3 className="mb-6 font-serif text-xl text-white">
+        <h3 className="mb-6 font-serif text-xl font-bold text-[var(--text-primary)]">
           The ORIAN Way: Outcome → Data
         </h3>
 
@@ -133,7 +133,7 @@ export default function TimelineComparison() {
         </div>
 
         {/* Metrics */}
-        <MetricCounters metrics={NEW_METRICS} className="border-t border-[rgba(0,212,170,0.1)] pt-4" />
+        <MetricCounters metrics={NEW_METRICS} className="border-t border-[rgba(0,178,59,0.15)] pt-4" />
       </motion.div>
     </div>
   )

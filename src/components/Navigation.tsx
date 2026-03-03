@@ -5,6 +5,7 @@ const SECTIONS = [
   { id: 'inversion', label: 'Philosophy' },
   { id: 'architecture', label: 'Architecture' },
   { id: 'proof', label: 'Industries' },
+  { id: 'roi', label: 'ROI Calculator' },
   { id: 'planner', label: 'Solution Planner' },
 ]
 
@@ -26,7 +27,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-[rgba(6,13,26,0.85)] backdrop-blur-xl border-b border-[rgba(0,212,170,0.08)]'
+            ? 'bg-[rgba(255,255,255,0.92)] backdrop-blur-xl border-b border-[rgba(0,0,0,0.06)] shadow-sm'
             : 'bg-transparent'
         }`}
       >
@@ -36,7 +37,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-teal to-foundation text-sm font-bold text-white">
               O
             </div>
-            <span className="font-serif text-xl text-white">
+            <span className="font-serif text-xl font-bold text-[var(--text-primary)]">
               ORIAN<span className="text-teal">.</span>Data
             </span>
           </a>
@@ -48,7 +49,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
                 key={s.id}
                 href={`#${s.id}`}
                 onClick={(e) => { e.preventDefault(); document.querySelector(`#${s.id}`)?.scrollIntoView({ behavior: 'smooth' }) }}
-                className="text-sm text-[var(--text-secondary)] transition-colors hover:text-white"
+                className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
               >
                 {s.label}
               </a>
@@ -69,7 +70,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
             onClick={(e) => { e.preventDefault(); document.querySelector(`#${s.id}`)?.scrollIntoView({ behavior: 'smooth' }) }}
             className={`h-2 w-2 rounded-full transition-all duration-300 ${
               activeSection === i
-                ? 'scale-125 bg-teal shadow-[0_0_8px_rgba(0,212,170,0.5)]'
+                ? 'scale-125 bg-teal shadow-[0_0_8px_rgba(0,178,59,0.4)]'
                 : 'bg-[var(--text-muted)] opacity-40 hover:opacity-70'
             }`}
             title={s.label}

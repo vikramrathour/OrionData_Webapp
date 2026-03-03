@@ -7,7 +7,7 @@ import type { AnimationPhase } from '../../types/graph'
 const PHASE_CONFIG: Record<AnimationPhase, { label: string; color: string; pulse: boolean }> = {
   observing: { label: 'Observing raw data', color: '#f5a623', pulse: false },
   decoding: { label: 'Decoding intent...', color: '#f5a623', pulse: true },
-  resolved: { label: 'Intent resolved', color: '#00d4aa', pulse: false },
+  resolved: { label: 'Intent resolved', color: '#00b23b', pulse: false },
 }
 
 export default function Hero() {
@@ -36,7 +36,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Headline */}
-          <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] tracking-tight">
+          <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.1] tracking-tight text-[var(--text-primary)]">
             <motion.span
               className="block"
               initial={{ opacity: 0, y: 20 }}
@@ -78,7 +78,7 @@ export default function Hero() {
           <AnimatePresence>
             {phase === 'resolved' && (
               <motion.p
-                className="mt-4 font-serif text-[13px] italic text-trust"
+                className="mt-4 font-serif text-[13px] italic text-[var(--text-trust)]"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -123,7 +123,7 @@ export default function Hero() {
       </div>
 
       {/* Mobile: graph as subtle background */}
-      <div className="absolute inset-0 opacity-20 lg:hidden">
+      <div className="absolute inset-0 opacity-10 lg:hidden">
         <SemanticGraph minimal />
       </div>
     </section>

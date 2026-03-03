@@ -3,7 +3,7 @@ import type { SolutionPlan as SolutionPlanType } from './PlannerAPI'
 
 const PILLAR_COLORS: Record<string, string> = {
   foundation: '#3b82f6',
-  semantic: '#00d4aa',
+  semantic: '#00b23b',
   ai: '#a78bfa',
   trust: '#f5a623',
 }
@@ -16,7 +16,7 @@ interface Props {
 export default function SolutionPlan({ plan, components }: Props) {
   const getColor = (compId: string) => {
     const comp = components.find((c) => c.id === compId)
-    return comp ? PILLAR_COLORS[comp.pillar] || '#00d4aa' : '#00d4aa'
+    return comp ? PILLAR_COLORS[comp.pillar] || '#00b23b' : '#00b23b'
   }
 
   const getName = (compId: string) => {
@@ -67,7 +67,7 @@ export default function SolutionPlan({ plan, components }: Props) {
               style={{ borderLeft: `3px solid ${getColor(comp.id)}` }}
             >
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-white">{getName(comp.id)}</span>
+                <span className="text-xs font-semibold text-[var(--text-primary)]">{getName(comp.id)}</span>
                 <span className="text-[9px] text-[var(--text-muted)]">Phase {comp.phase}</span>
               </div>
               <p className="mt-1 text-[11px] text-[var(--text-secondary)]">{comp.role}</p>
@@ -93,7 +93,7 @@ export default function SolutionPlan({ plan, components }: Props) {
           {plan.phases.map((phase) => (
             <div key={phase.number} className="rounded-lg bg-[var(--bg-surface)] p-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-white">
+                <span className="text-xs font-semibold text-[var(--text-primary)]">
                   Phase {phase.number}: {phase.title}
                 </span>
                 <span className="text-[10px] text-teal">{phase.weeks}</span>
@@ -146,7 +146,7 @@ export default function SolutionPlan({ plan, components }: Props) {
           </div>
           <div className="rounded-lg bg-teal/5 p-3 text-center ring-1 ring-teal/20">
             <p className="text-[10px] text-teal">With ORIAN.Data</p>
-            <p className="font-serif text-xl text-white">
+            <p className="font-serif text-xl text-[var(--text-primary)]">
               {plan.acceleration.withOrian.weeks} wks
             </p>
             <p className="text-[10px] text-teal">

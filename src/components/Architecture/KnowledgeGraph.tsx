@@ -5,7 +5,7 @@ import NodeTooltip from './NodeTooltip'
 
 const PILLAR_COLORS: Record<string, string> = {
   foundation: '#3b82f6',
-  semantic: '#00d4aa',
+  semantic: '#00b23b',
   ai: '#a78bfa',
   trust: '#f5a623',
 }
@@ -211,7 +211,7 @@ export default function KnowledgeGraph({ graphData, activeChannels }: Props) {
           .attr('fill', color)
           .attr('opacity', 0.5)
           .attr('font-size', 11)
-          .attr('font-family', "'DM Sans', sans-serif")
+          .attr('font-family', "'Roboto', sans-serif")
           .attr('font-weight', 600)
           .text(pillar.name)
       }
@@ -224,10 +224,10 @@ export default function KnowledgeGraph({ graphData, activeChannels }: Props) {
       .data(links)
       .join('line')
       .attr('stroke', (d) => {
-        if (d.isDotted) return 'rgba(0,212,170,0.06)'
+        if (d.isDotted) return 'rgba(0,178,59,0.06)'
         const src = typeof d.source === 'string' ? d.source : d.source.id
         const srcNode = nodes.find((n) => n.id === src)
-        return srcNode ? PILLAR_COLORS[srcNode.pillar] || '#1e3a5f' : '#1e3a5f'
+        return srcNode ? PILLAR_COLORS[srcNode.pillar] || '#d1d5db' : '#d1d5db'
       })
       .attr('stroke-width', (d) => d.isDotted ? 0.5 : 1)
       .attr('stroke-dasharray', (d) => d.isDotted ? '3,3' : 'none')
@@ -246,14 +246,14 @@ export default function KnowledgeGraph({ graphData, activeChannels }: Props) {
     nodeSel.append('circle')
       .attr('r', (d) => d.radius)
       .attr('fill', (d) => {
-        if (d.isCenter) return 'rgba(0,212,170,0.15)'
+        if (d.isCenter) return 'rgba(0,178,59,0.15)'
         if (d.isOntology) return 'rgba(148,163,184,0.1)'
         return `${PILLAR_COLORS[d.pillar]}15`
       })
       .attr('stroke', (d) => {
-        if (d.isCenter) return '#00d4aa'
+        if (d.isCenter) return '#00b23b'
         if (d.isOntology) return 'rgba(148,163,184,0.3)'
-        return PILLAR_COLORS[d.pillar] || '#1e3a5f'
+        return PILLAR_COLORS[d.pillar] || '#d1d5db'
       })
       .attr('stroke-width', (d) => d.isCenter ? 2 : 1)
 
@@ -262,16 +262,16 @@ export default function KnowledgeGraph({ graphData, activeChannels }: Props) {
       .attr('text-anchor', 'middle')
       .attr('dy', (d) => d.isCenter ? -4 : d.radius + 14)
       .attr('fill', (d) => {
-        if (d.isCenter) return '#ffffff'
-        if (d.isOntology) return '#64748b'
-        return '#94a3b8'
+        if (d.isCenter) return '#1a1a1a'
+        if (d.isOntology) return '#94a3b8'
+        return '#4a5568'
       })
       .attr('font-size', (d) => {
         if (d.isCenter) return 14
         if (d.isOntology) return 9
         return 11
       })
-      .attr('font-family', (d) => d.isOntology ? "'JetBrains Mono', monospace" : "'DM Sans', sans-serif")
+      .attr('font-family', (d) => d.isOntology ? "'JetBrains Mono', monospace" : "'Roboto', sans-serif")
       .attr('font-weight', (d) => d.isCenter ? 700 : 500)
       .text((d) => d.label)
 
@@ -280,9 +280,9 @@ export default function KnowledgeGraph({ graphData, activeChannels }: Props) {
       .append('text')
       .attr('text-anchor', 'middle')
       .attr('dy', 12)
-      .attr('fill', '#00d4aa')
+      .attr('fill', '#00b23b')
       .attr('font-size', 10)
-      .attr('font-family', "'DM Sans', sans-serif")
+      .attr('font-family', "'Roboto', sans-serif")
       .attr('font-style', 'italic')
       .text('Data with Intent')
 
@@ -418,7 +418,7 @@ export default function KnowledgeGraph({ graphData, activeChannels }: Props) {
         if (!src.x || !tgt.x) continue
         const x = src.x + (tgt.x - src.x) * p.t
         const y = src.y! + (tgt.y! - src.y!) * p.t
-        const color = PILLAR_COLORS[src.pillar] || '#00d4aa'
+        const color = PILLAR_COLORS[src.pillar] || '#00b23b'
         pCtx.beginPath()
         pCtx.arc(x, y, 2, 0, Math.PI * 2)
         pCtx.fillStyle = color
