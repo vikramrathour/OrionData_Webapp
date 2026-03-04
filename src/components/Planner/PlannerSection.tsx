@@ -2,6 +2,8 @@ import { useState, useCallback, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import type { GraphData } from '../../hooks/useGraphData'
 import { useAppContext } from '../../context/AppContext'
+import type { MaturityResult } from '../../context/AppContext'
+import { maturityLevels } from '../MaturityFramework/maturity-data'
 import ChatInterface from './ChatInterface'
 import SolutionPlan from './SolutionPlan'
 import EngagementCTA from './EngagementCTA'
@@ -26,9 +28,20 @@ function buildPrefillMessage(inputs: import('../../context/AppContext').ROIInput
   return parts.join(', ') + '.'
 }
 
+function buildMaturityPrefillMessage(result: MaturityResult): string {
+  const levelData = maturityLevels[result.level - 1]
+  return `Our organization is at Level ${result.level} (${levelData.name}). ` +
+    `We recognize: ${result.signals.slice(0, 3).join('; ')}. ` +
+    `We want to move toward Level ${Math.min(5, result.level + 1)}.`
+}
+
 export default function PlannerSection({ graphData }: Props) {
-  const { roiInputs } = useAppContext()
-  const initialMessage = useMemo(() => roiInputs ? buildPrefillMessage(roiInputs) : undefined, [roiInputs])
+  const { roiInputs, maturityResult } = useAppContext()
+  const initialMessage = useMemo(() => {
+    if (maturityResult) return buildMaturityPrefillMessage(maturityResult)
+    if (roiInputs) return buildPrefillMessage(roiInputs)
+    return undefined
+  }, [roiInputs, maturityResult])
   const [loading, setLoading] = useState(false)
   const [plan, setPlan] = useState<PlanType | null>(null)
   const [conversation, setConversation] = useState<ConversationMessage[]>([])

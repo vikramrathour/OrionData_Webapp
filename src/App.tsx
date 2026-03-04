@@ -9,6 +9,7 @@ import InversionSection from './components/Inversion/InversionSection'
 import ArchitectureSection from './components/Architecture/ArchitectureSection'
 
 const ProofSection = lazy(() => import('./components/Proof/ProofSection'))
+const MaturityFrameworkSection = lazy(() => import('./components/MaturityFramework/MaturityFrameworkSection'))
 const ROISection = lazy(() => import('./components/Section5_ROI/ROISection'))
 const PlannerSection = lazy(() => import('./components/Planner/PlannerSection'))
 
@@ -40,7 +41,7 @@ export default function App() {
           <ArchitectureSection graphData={graphData} />
         </section>
 
-        {/* Free-scroll sections (4-6) */}
+        {/* Free-scroll sections (4-7) */}
         <div ref={registerSection(3)}>
           <Suspense fallback={<SectionLoader />}>
             <ProofSection graphData={graphData} />
@@ -48,10 +49,15 @@ export default function App() {
         </div>
         <div ref={registerSection(4)}>
           <Suspense fallback={<SectionLoader />}>
-            <ROISection />
+            <MaturityFrameworkSection />
           </Suspense>
         </div>
         <div ref={registerSection(5)}>
+          <Suspense fallback={<SectionLoader />}>
+            <ROISection />
+          </Suspense>
+        </div>
+        <div ref={registerSection(6)}>
           <Suspense fallback={<SectionLoader />}>
             <PlannerSection graphData={graphData} />
           </Suspense>

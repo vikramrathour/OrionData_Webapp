@@ -5,6 +5,7 @@ const SECTIONS = [
   { id: 'inversion', label: 'Philosophy' },
   { id: 'architecture', label: 'Architecture' },
   { id: 'proof', label: 'Industries' },
+  { id: 'maturity', label: 'Where Are You?' },
   { id: 'roi', label: 'ROI Calculator' },
   { id: 'planner', label: 'Solution Planner' },
 ]

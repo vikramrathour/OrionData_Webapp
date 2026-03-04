@@ -1,5 +1,12 @@
 import { createContext, useContext, useState, type ReactNode } from 'react'
 
+export interface MaturityResult {
+  level: number
+  score: number
+  isTransitional: boolean
+  signals: string[]
+}
+
 export interface ROIInputs {
   industry: string
   dataVolumeTB: number
@@ -21,6 +28,8 @@ interface AppContextValue {
   setRoiInputs: (inputs: ROIInputs) => void
   highlightComponent: string | null
   setHighlightComponent: (id: string | null) => void
+  maturityResult: MaturityResult | null
+  setMaturityResult: (result: MaturityResult) => void
 }
 
 const AppContext = createContext<AppContextValue | null>(null)
@@ -28,9 +37,10 @@ const AppContext = createContext<AppContextValue | null>(null)
 export function AppProvider({ children }: { children: ReactNode }) {
   const [roiInputs, setRoiInputs] = useState<ROIInputs | null>(null)
   const [highlightComponent, setHighlightComponent] = useState<string | null>(null)
+  const [maturityResult, setMaturityResult] = useState<MaturityResult | null>(null)
 
   return (
-    <AppContext.Provider value={{ roiInputs, setRoiInputs, highlightComponent, setHighlightComponent }}>
+    <AppContext.Provider value={{ roiInputs, setRoiInputs, highlightComponent, setHighlightComponent, maturityResult, setMaturityResult }}>
       {children}
     </AppContext.Provider>
   )
