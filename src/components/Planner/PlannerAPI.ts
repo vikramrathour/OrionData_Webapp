@@ -57,7 +57,7 @@ function generateDemoPlan(message: string): SolutionPlan {
         { id: 'migrate', name: 'ORIAN.Data.Migrate', role: 'Automated source code analysis, schema mapping, and migration pipeline generation', phase: 2, deliveryChannel: 'As a Tool' },
         { id: 'transform', name: 'ORIAN.Data.Transform', role: 'Cross-platform pipeline generation from business specs (Spark, SQL, dbt)', phase: 2, deliveryChannel: 'As a Tool' },
         { id: 'test', name: 'ORIAN.Data.Test', role: 'Automated regression test generation and parallel-run validation', phase: 2, deliveryChannel: 'As a Tool' },
-        { id: 'sentinel-dq', name: 'Sentinel-DQ', role: 'Data quality validation pre- and post-migration with trust scoring', phase: 3, deliveryChannel: 'As a Tool' },
+        { id: 'sentinel-dq', name: 'OrionDQ', role: 'Data quality validation pre- and post-migration with trust scoring', phase: 3, deliveryChannel: 'As a Tool' },
         { id: 'lineage', name: 'ORIAN.Data.Lineage', role: 'End-to-end lineage mapping to ensure no downstream breakage', phase: 3, deliveryChannel: 'As Specs & Frameworks' },
       ],
       edges: [
@@ -93,7 +93,7 @@ function generateDemoPlan(message: string): SolutionPlan {
       recommendedComponents: [
         { id: 'ontology', name: 'ORIAN.Data.Ontology', role: 'HL7/FHIR ontology starter kit for healthcare concept modeling and resource mapping', phase: 1, deliveryChannel: 'As Specs & Frameworks' },
         { id: 'ingest', name: 'ORIAN.Data.Ingest', role: 'Multi-source clinical data ingestion with ontology-aware schema detection', phase: 1, deliveryChannel: 'As a Tool' },
-        { id: 'sentinel-dq', name: 'Sentinel-DQ', role: 'Clinical data quality validation with trust scoring for patient safety', phase: 2, deliveryChannel: 'As a Tool' },
+        { id: 'sentinel-dq', name: 'OrionDQ', role: 'Clinical data quality validation with trust scoring for patient safety', phase: 2, deliveryChannel: 'As a Tool' },
         { id: 'context', name: 'ORIAN.Data.Context', role: 'Inference-ready clinical data packaging for AI consumption', phase: 2, deliveryChannel: 'As Prompts & Skills' },
         { id: 'comply', name: 'ORIAN.Data.Comply', role: 'HIPAA compliance automation with PHI tracking and audit evidence', phase: 2, deliveryChannel: 'As Standards & Best Practices' },
         { id: 'semantic-layer', name: 'ORIAN.Data.Semantic', role: 'Unified patient data products with business-meaningful clinical abstractions', phase: 3, deliveryChannel: 'As a Tool' },
@@ -131,7 +131,7 @@ function generateDemoPlan(message: string): SolutionPlan {
       },
       recommendedComponents: [
         { id: 'ontology', name: 'ORIAN.Data.Ontology', role: 'BIAN ontology starter kit for banking domain modeling and regulatory concept alignment', phase: 1, deliveryChannel: 'As Specs & Frameworks' },
-        { id: 'sentinel-dq', name: 'Sentinel-DQ', role: 'Automated data quality profiling with trust scoring aligned to BCBS 239 principles', phase: 1, deliveryChannel: 'As a Tool' },
+        { id: 'sentinel-dq', name: 'OrionDQ', role: 'Automated data quality profiling with trust scoring aligned to BCBS 239 principles', phase: 1, deliveryChannel: 'As a Tool' },
         { id: 'lineage', name: 'ORIAN.Data.Lineage', role: 'End-to-end lineage from source to regulatory report with audit trail', phase: 2, deliveryChannel: 'As a Tool' },
         { id: 'comply', name: 'ORIAN.Data.Comply', role: 'Policy-as-code compliance rules with automated audit evidence generation', phase: 2, deliveryChannel: 'As Standards & Best Practices' },
         { id: 'catalog', name: 'ORIAN.Data.Catalog', role: 'Semantic discovery and classification of regulatory data assets', phase: 2, deliveryChannel: 'As Specs & Frameworks' },
@@ -171,7 +171,7 @@ function generateDemoPlan(message: string): SolutionPlan {
       painPoints: ['Data quality inconsistencies', 'Lack of semantic context', 'Manual remediation processes', 'No trust scoring framework'],
     },
     recommendedComponents: [
-      { id: 'sentinel-dq', name: 'Sentinel-DQ', role: 'Automated data quality profiling, anomaly detection, and trust scoring with ML-driven baselines', phase: 1, deliveryChannel: 'As a Tool' },
+      { id: 'sentinel-dq', name: 'OrionDQ', role: 'Automated data quality profiling, anomaly detection, and trust scoring with ML-driven baselines', phase: 1, deliveryChannel: 'As a Tool' },
       { id: 'ontology', name: 'ORIAN.Data.Ontology', role: 'Industry ontology engine for semantic context and business-meaningful validation rules', phase: 1, deliveryChannel: 'As Specs & Frameworks' },
       { id: 'ingest', name: 'ORIAN.Data.Ingest', role: 'Ontology-aware ingestion with quality-at-ingestion rule libraries', phase: 1, deliveryChannel: 'As Prompts & Skills' },
       { id: 'catalog', name: 'ORIAN.Data.Catalog', role: 'Semantic discovery and classification with automated documentation', phase: 2, deliveryChannel: 'As Specs & Frameworks' },

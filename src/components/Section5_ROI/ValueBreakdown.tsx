@@ -27,7 +27,7 @@ const COMPONENT_LABELS: Record<string, string> = {
   'agent': 'ORIAN.Data.Agent',
   'transform': 'ORIAN.Data.Transform',
   'ingest': 'ORIAN.Data.Ingest',
-  'sentinel-dq': 'Sentinel-DQ',
+  'sentinel-dq': 'OrionDQ',
   'ontology': 'ORIAN.Data.Ontology',
   'comply': 'ORIAN.Data.Comply',
   'lineage': 'ORIAN.Data.Lineage',

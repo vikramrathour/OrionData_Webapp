@@ -81,7 +81,7 @@ export const maturityLevels: MaturityLevelData[] = [
       investment: '$300K–$600K',
       duration: '8–12 weeks',
       primaryPillar: 'Semantic Intelligence + Trust',
-      components: ['Ontology', 'Semantic', 'Sentinel-DQ', 'Catalog'],
+      components: ['Ontology', 'Semantic', 'OrionDQ', 'Catalog'],
       channels: ['Specs', 'Prompts', 'Standards', 'Code'],
       accelerationMetrics: [
         { label: 'Engineer capacity gain', value: '25–35%' },

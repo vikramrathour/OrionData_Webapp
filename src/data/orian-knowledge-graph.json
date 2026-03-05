@@ -249,8 +249,8 @@
     },
     {
       "id": "sentinel-dq",
-      "name": "Sentinel-DQ",
-      "shortName": "Sentinel-DQ",
+      "name": "OrionDQ",
+      "shortName": "OrionDQ",
       "pillar": "trust",
       "description": "Data quality platform with polymorphic agent architecture — automated profiling, anomaly detection, trust scoring, and remediation",
       "provenance": "Born from the gap between what quality tools promise and what regulated enterprises actually need",
@@ -482,19 +482,19 @@
   "valueChainPaths": {
     "outcomeToComponent": {
       "description": "Start with a business outcome, trace backward to the components that deliver it",
-      "example": "Reduce settlement risk → Settlement Risk Exposure Analytics → [Ingest + Ontology(BIAN) + Context + Sentinel-DQ] → Delivery via Specs + Prompts on Day 1"
+      "example": "Reduce settlement risk → Settlement Risk Exposure Analytics → [Ingest + Ontology(BIAN) + Context + OrionDQ] → Delivery via Specs + Prompts on Day 1"
     },
     "intentToData": {
       "description": "Start with an industry ontology, trace how intent flows through the system",
-      "example": "BIAN → Ontology → enriches → Sentinel-DQ → certifies → Context → delivers intent-aligned data to agents"
+      "example": "BIAN → Ontology → enriches → OrionDQ → certifies → Context → delivers intent-aligned data to agents"
     },
     "trustChain": {
       "description": "Start with Trust Score, trace through quality dimensions to regulatory compliance",
-      "example": "Trust Score → Sentinel-DQ dimensions → validates transforms → lineage traces to comply → BCBS 239 audit evidence"
+      "example": "Trust Score → OrionDQ dimensions → validates transforms → lineage traces to comply → BCBS 239 audit evidence"
     },
     "adoptionPath": {
       "description": "Start with a delivery channel, find what's available on Day 1",
-      "example": "Prompts & Skills channel → [Ingest, Migrate, Transform, Ontology, Semantic, Context, Agent, Skills, Estimate, Test, Sentinel-DQ] → 12 of 17 components available without security clearance"
+      "example": "Prompts & Skills channel → [Ingest, Migrate, Transform, Ontology, Semantic, Context, Agent, Skills, Estimate, Test, OrionDQ] → 12 of 17 components available without security clearance"
     }
   },
 
