@@ -23,11 +23,11 @@ export default function ProofSection({ graphData }: Props) {
   const [activeIndustry, setActiveIndustry] = useState('bfsi')
 
   const counts: Record<string, number> = {}
-  for (const [key, cases] of Object.entries(graphData.useCases)) {
-    counts[key] = cases.length
+  for (const key of Object.keys(graphData.useCases)) {
+    counts[key] = 4
   }
 
-  const currentCases = graphData.useCases[activeIndustry] || []
+  const currentCases = (graphData.useCases[activeIndustry] || []).slice(0, 4)
 
   return (
     <section id="proof" className="relative min-h-screen bg-[var(--bg-deep)] py-24">
@@ -44,7 +44,7 @@ export default function ProofSection({ graphData }: Props) {
             The Proof
           </p>
           <h2 className="mt-4 font-serif text-3xl font-bold text-[var(--text-primary)] md:text-4xl">
-            35 use cases. 5 industries.{' '}
+            20 use cases. 5 industries.{' '}
             <br className="hidden md:inline" />
             Every outcome earned, not promised.
           </h2>
