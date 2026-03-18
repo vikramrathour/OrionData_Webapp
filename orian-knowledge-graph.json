@@ -181,8 +181,8 @@
     },
     {
       "id": "agent",
-      "name": "ORIAN.Data.Agent",
-      "shortName": "Agent",
+      "name": "ORIAN.Data.Assist",
+      "shortName": "Assist",
       "pillar": "ai",
       "description": "Polymorphic AI engineering agent — skill-driven, ontology-aware, composable across data engineering tasks",
       "provenance": "Closing the AI productivity gap from 10-15% to 55%+ for data engineers",
@@ -215,8 +215,8 @@
     },
     {
       "id": "estimate",
-      "name": "ORIAN.Data.Estimate",
-      "shortName": "Estimate",
+      "name": "ORIAN.Data.Catalyst",
+      "shortName": "Catalyst",
       "pillar": "ai",
       "description": "AI-powered scoping and estimation — compressing 2-3 week assessments to 2-3 days",
       "provenance": "Built to eliminate the senior architect bottleneck in engagement scoping",

@@ -88,8 +88,8 @@ export const rootCauses: RootCause[] = [
     problem: "The root cause underneath all others. Data ecosystems are context-deserts — schemas don't describe meaning, pipelines don't describe intent.",
     whyAiFails: 'Without semantic context, AI is just a fast typist producing code with the same quality problems as a junior engineer.',
     orianFix: {
-      components: ['Context', 'Agent', 'Skills'],
-      description: 'The full AI-Led Engineering pillar. Context enriches assets with meaning. Agent understands your ontology. Skills encode 19+ battle-tested patterns.',
+      components: ['Context', 'Assist', 'Skills'],
+      description: 'The full AI-Led Engineering pillar. Context enriches assets with meaning. Assist understands your ontology. Skills encode 19+ battle-tested patterns.',
     },
     metric: { label: 'Engineer capacity', value: '1.3×', detail: 'equivalent to adding 3 engineers per team of 10' },
     accentColor: '#a78bfa',

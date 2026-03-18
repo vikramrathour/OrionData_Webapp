@@ -4,6 +4,8 @@ import { useScrollSection } from './hooks/useScrollSection'
 import { AppProvider } from './context/AppContext'
 import BackgroundLayer from './components/BackgroundLayer'
 import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import CookieBanner from './components/CookieBanner'
 import Hero from './components/Hero/Hero'
 import InversionSection from './components/Inversion/InversionSection'
 import ArchitectureSection from './components/Architecture/ArchitectureSection'
@@ -69,6 +71,8 @@ export default function App() {
           </Suspense>
         </div>
       </main>
+      <Footer />
+      <CookieBanner />
     </AppProvider>
   )
 }

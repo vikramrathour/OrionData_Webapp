@@ -24,7 +24,7 @@ interface LeverConfig {
 
 const COMPONENT_LABELS: Record<string, string> = {
   'skills': 'ORIAN.Data.Skills',
-  'agent': 'ORIAN.Data.Agent',
+  'agent': 'ORIAN.Data.Assist',
   'transform': 'ORIAN.Data.Transform',
   'ingest': 'ORIAN.Data.Ingest',
   'sentinel-dq': 'OrionDQ',
@@ -32,7 +32,7 @@ const COMPONENT_LABELS: Record<string, string> = {
   'comply': 'ORIAN.Data.Comply',
   'lineage': 'ORIAN.Data.Lineage',
   'migrate': 'ORIAN.Data.Migrate',
-  'estimate': 'ORIAN.Data.Estimate',
+  'estimate': 'ORIAN.Data.Catalyst',
   'test': 'ORIAN.Data.Test',
   'context': 'ORIAN.Data.Context',
   'semantic-layer': 'ORIAN.Data.Semantic',

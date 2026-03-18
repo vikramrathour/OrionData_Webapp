@@ -72,20 +72,18 @@ export default function MaturityFrameworkSection() {
       </div>
 
       {/* Floating CTA */}
-      {!assessmentResult && (
-        <motion.button
-          className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[var(--accent-teal)] px-5 py-3 text-sm font-semibold text-white shadow-lg transition-shadow hover:shadow-xl"
-          onClick={() => setShowAssessment(true)}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.4 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Start Unlocking Insights
-          <span aria-hidden="true">&rarr;</span>
-        </motion.button>
-      )}
+      <motion.button
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[var(--accent-teal)] px-5 py-3 text-sm font-semibold text-white shadow-lg transition-shadow hover:shadow-xl"
+        onClick={() => setShowAssessment(true)}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.4 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        {assessmentResult ? 'Retake Assessment' : 'Start Unlocking Insights'}
+        <span aria-hidden="true">&rarr;</span>
+      </motion.button>
 
       {/* Assessment Modal */}
       <AnimatePresence>

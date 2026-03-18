@@ -4,7 +4,74 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ORIAN.Data — AI-Native Data Platform Accelerator</title>
+
+    <!-- SEO -->
+    <title>ORIAN.Data — AI-Native Data Platform Accelerator | Xoriant</title>
+    <meta name="description" content="ORIAN.Data by Xoriant is an AI-native data platform that closes the productivity gap in data engineering — accelerating pipelines, semantic accuracy, and data quality at scale." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://orian.xoriant.com" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://orian.xoriant.com" />
+    <meta property="og:title" content="ORIAN.Data — AI-Native Data Platform Accelerator | Xoriant" />
+    <meta property="og:description" content="ORIAN.Data by Xoriant is an AI-native data platform that closes the productivity gap in data engineering — accelerating pipelines, semantic accuracy, and data quality at scale." />
+    <meta property="og:image" content="https://orian.xoriant.com/og-image.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Xoriant" />
+    <meta name="twitter:title" content="ORIAN.Data — AI-Native Data Platform Accelerator | Xoriant" />
+    <meta name="twitter:description" content="ORIAN.Data by Xoriant is an AI-native data platform that closes the productivity gap in data engineering — accelerating pipelines, semantic accuracy, and data quality at scale." />
+    <meta name="twitter:image" content="https://orian.xoriant.com/og-image.jpg" />
+
+    <!-- Google Analytics 4 — fires only after cookie consent (see CookieBanner.tsx) -->
+    <script>
+      window.__analyticsReady = false;
+      window.__initAnalytics = function () {
+        if (window.__analyticsReady) return;
+        window.__analyticsReady = true;
+
+        // GA4
+        var ga = document.createElement('script');
+        ga.async = true;
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-QJGQRBZV5X';
+        document.head.appendChild(ga);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-QJGQRBZV5X', { anonymize_ip: true, send_page_view: true });
+
+        // GTM
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l !== 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WCFMB87');
+
+        // LinkedIn Insight Tag
+        window._linkedin_partner_id = '625707';
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(window._linkedin_partner_id);
+        (function () {
+          var s = document.getElementsByTagName('script')[0];
+          var b = document.createElement('script');
+          b.type = 'text/javascript';
+          b.async = true;
+          b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+          s.parentNode.insertBefore(b, s);
+        })();
+      };
+    </script>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,6 +80,16 @@
     />
   </head>
   <body>
+    <!-- GTM noscript fallback — only renders if JS is disabled -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WCFMB87"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe>
+    </noscript>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

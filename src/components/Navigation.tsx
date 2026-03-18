@@ -34,18 +34,27 @@ export default function Navigation({ activeSection }: NavigationProps) {
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          {/* Logo */}
-          <a href="#hero" onClick={(e) => { e.preventDefault(); document.querySelector('#hero')?.scrollIntoView({ behavior: 'smooth' }) }} className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-teal to-foundation text-sm font-bold text-white">
-              O
+          {/* Logo — links to xoriant.com per brand guidelines */}
+          <a
+            href="https://www.xoriant.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2"
+            aria-label="Xoriant homepage"
+          >
+            <div
+              className="flex h-8 w-8 items-center justify-center rounded-lg text-sm font-bold text-white"
+              style={{ backgroundColor: '#14BB30' }}
+            >
+              X
             </div>
             <span className="font-serif text-xl font-bold text-[var(--text-primary)]">
-              ORIAN<span className="text-teal">.</span>Data
+              ORIAN<span style={{ color: '#14BB30' }}>.</span>Data
             </span>
           </a>
 
-          {/* Section links */}
-          <div className="hidden items-center gap-8 md:flex">
+          {/* Section links + Contact Us CTA */}
+          <div className="hidden items-center gap-6 md:flex">
             {SECTIONS.slice(2).map((s) => (
               <a
                 key={s.id}
@@ -56,9 +65,20 @@ export default function Navigation({ activeSection }: NavigationProps) {
                 {s.label}
               </a>
             ))}
-            <span className="rounded-full border border-[var(--border-subtle)] px-3 py-1 text-xs text-[var(--text-muted)]">
-              Xoriant
-            </span>
+            <a
+              href="https://www.xoriant.com/contact-us"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium text-white transition-colors"
+              style={{ backgroundColor: '#14BB30' }}
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0fa328')}
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#14BB30')}
+            >
+              Contact Us
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
           </div>
         </div>
       </nav>
@@ -72,7 +92,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
             onClick={(e) => { e.preventDefault(); document.querySelector(`#${s.id}`)?.scrollIntoView({ behavior: 'smooth' }) }}
             className={`h-2 w-2 rounded-full transition-all duration-300 ${
               activeSection === i
-                ? 'scale-125 bg-teal shadow-[0_0_8px_rgba(0,178,59,0.4)]'
+                ? 'scale-125 bg-teal shadow-[0_0_8px_rgba(20,187,48,0.4)]'
                 : 'bg-[var(--text-muted)] opacity-40 hover:opacity-70'
             }`}
             title={s.label}

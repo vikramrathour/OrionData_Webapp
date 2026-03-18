@@ -50,7 +50,7 @@ export const maturityLevels: MaturityLevelData[] = [
       investment: '$80K–$150K',
       duration: '2 weeks',
       primaryPillar: 'Data Foundation',
-      components: ['Estimate', 'Catalog', 'Migrate'],
+      components: ['Catalyst', 'Catalog', 'Migrate'],
       channels: ['Specs', 'Standards'],
       accelerationMetrics: [
         { label: 'Migration cost reduction', value: '65%' },
@@ -113,7 +113,7 @@ export const maturityLevels: MaturityLevelData[] = [
       investment: '$500K–$1.5M',
       duration: '12–20 weeks',
       primaryPillar: 'AI-Led Engineering + Trust (automation)',
-      components: ['Context', 'Comply', 'Lineage', 'Agent', 'Skills', 'Observe'],
+      components: ['Context', 'Comply', 'Lineage', 'Assist', 'Skills', 'Observe'],
       channels: ['All 5'],
       accelerationMetrics: [
         { label: 'Compliance effort reduction', value: '65%/framework' },
@@ -145,7 +145,7 @@ export const maturityLevels: MaturityLevelData[] = [
       investment: '$1M–$3M',
       duration: '16–24 weeks initial',
       primaryPillar: 'All four pillars',
-      components: ['Full Semantic Intelligence', 'Agent', 'Skills', 'Full Trust automation'],
+      components: ['Full Semantic Intelligence', 'Assist', 'Skills', 'Full Trust automation'],
       channels: ['All 5 — Tool as primary'],
       accelerationMetrics: [
         { label: 'Year 2 efficiency gain', value: '40%' },

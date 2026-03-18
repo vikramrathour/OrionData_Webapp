@@ -10,10 +10,10 @@ export default {
         'bg-primary': '#f8f9fa',
         'bg-surface': '#f1f3f5',
         foundation: '#3b82f6',
-        semantic: '#00b23b',
+        semantic: '#14BB30',
         ai: '#a78bfa',
         trust: '#f5a623',
-        teal: '#00b23b',
+        teal: '#14BB30',
       },
       fontFamily: {
         serif: ['Roboto', 'sans-serif'],

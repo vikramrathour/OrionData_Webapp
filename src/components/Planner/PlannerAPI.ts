@@ -53,7 +53,7 @@ function generateDemoPlan(message: string): SolutionPlan {
         painPoints: ['Legacy platform constraints', 'Migration complexity and risk', 'Business continuity during transition', 'Post-migration validation'],
       },
       recommendedComponents: [
-        { id: 'estimate', name: 'ORIAN.Data.Estimate', role: 'AI-powered workload complexity scoring and effort estimation to compress assessment from weeks to days', phase: 1, deliveryChannel: 'As Prompts & Skills' },
+        { id: 'estimate', name: 'ORIAN.Data.Catalyst', role: 'AI-powered workload complexity scoring and effort estimation to compress assessment from weeks to days', phase: 1, deliveryChannel: 'As Prompts & Skills' },
         { id: 'migrate', name: 'ORIAN.Data.Migrate', role: 'Automated source code analysis, schema mapping, and migration pipeline generation', phase: 2, deliveryChannel: 'As a Tool' },
         { id: 'transform', name: 'ORIAN.Data.Transform', role: 'Cross-platform pipeline generation from business specs (Spark, SQL, dbt)', phase: 2, deliveryChannel: 'As a Tool' },
         { id: 'test', name: 'ORIAN.Data.Test', role: 'Automated regression test generation and parallel-run validation', phase: 2, deliveryChannel: 'As a Tool' },
